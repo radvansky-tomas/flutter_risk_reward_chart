@@ -150,7 +150,7 @@ class RiskRewardService {
       var color = getColorBasedOnTypeAndPosition(option);
       seriesList.add(
         charts.Series<PayoffData, double>(
-          id: '${option.strikePrice} (${option.type.toString()})',
+          id: '${option.strikePrice} (${option.type.name})',
           colorFn: (_, __) => color,
           domainFn: (PayoffData data, _) => data.underlyingPrice,
           measureFn: (PayoffData data, _) => data.payoff,
