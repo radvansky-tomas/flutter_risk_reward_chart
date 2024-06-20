@@ -85,7 +85,7 @@ class RiskRewardChart extends StatelessWidget {
               breakEven,
               charts.RangeAnnotationAxisType.domain,
               startLabel: 'Break-even',
-              color: charts.MaterialPalette.yellow.shadeDefault,
+              color: charts.MaterialPalette.black,
               dashPattern: [4, 4],
             ),
 

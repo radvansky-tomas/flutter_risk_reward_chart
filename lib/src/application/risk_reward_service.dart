@@ -125,7 +125,6 @@ class RiskRewardService {
         totalPayoff += payoffs.first.payoff;
       }
 
-      debugPrint('Price: $price, Total Payoff: $totalPayoff');
       combinedPayoff.add(PayoffData(price, totalPayoff));
     }
 
@@ -171,10 +170,9 @@ class RiskRewardService {
       case OptionType.callLong:
         return charts.MaterialPalette.green.shadeDefault;
       case OptionType.putShort:
-        charts.MaterialPalette.red.shadeDefault.lighter;
+        return charts.MaterialPalette.blue.shadeDefault.lighter;
       case OptionType.putLong:
-        charts.MaterialPalette.red.shadeDefault;
+        return charts.MaterialPalette.blue.shadeDefault;
     }
-    return charts.MaterialPalette.blue.shadeDefault;
   }
 }
