@@ -8,13 +8,17 @@ A Flutter package for visualizing risk and reward charts for different options t
 - Easily configurable with a list of options data.
 - Calculate payoffs for multiple underlying prices.
 
+## Screenshot
+
+![Risk Reward Chart](https://user-images.githubusercontent.com/21296413/139570746-5e1d8d7b-1f3d-4b3d-9e5b-9c8d5f3e1b0a.png)
+
 ## Installation
 
 Add `flutter_risk_reward_chart` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_risk_reward_chart: ^1.0.0
+  flutter_risk_reward_chart: ^0.0.1
 ```
 
 ## Usage
