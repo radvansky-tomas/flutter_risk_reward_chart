@@ -10,7 +10,7 @@ A Flutter package for visualizing risk and reward charts for different options t
 
 ## Screenshot
 
-![Risk Reward Chart](https://user-images.githubusercontent.com/21296413/139570746-5e1d8d7b-1f3d-4b3d-9e5b-9c8d5f3e1b0a.png)
+![Risk Reward Chart](/screenshots/ios_screenshot.png?raw=true "Risk Reward Chart")
 
 ## Installation
 
