@@ -1,9 +1,9 @@
-import '../domain/option_data.dart';
-import '../domain/payoff_data.dart';
-
-// ignore: depend_on_referenced_packages
+import 'package:flutter/foundation.dart';
 import 'package:community_charts_flutter/community_charts_flutter.dart'
     as charts;
+
+import '../domain/option_data.dart';
+import '../domain/payoff_data.dart';
 
 class RiskRewardService {
   double minUnderlyingPrice(List<OptionData> optionsData) {
@@ -125,7 +125,7 @@ class RiskRewardService {
         totalPayoff += payoffs.first.payoff;
       }
 
-      print('Price: $price, Total Payoff: $totalPayoff');
+      debugPrint('Price: $price, Total Payoff: $totalPayoff');
       combinedPayoff.add(PayoffData(price, totalPayoff));
     }
 

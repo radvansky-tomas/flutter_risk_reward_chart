@@ -1,4 +1,3 @@
-// ignore: depend_on_referenced_packages
 import 'package:equatable/equatable.dart';
 
 enum OptionType { callShort, callLong, putShort, putLong }

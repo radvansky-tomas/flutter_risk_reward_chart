@@ -32,7 +32,7 @@ void main() {
 
     var result = riskRewardService.calculatePayoff(option, underlyingPrices);
 
-    var expected = [
+    var expected = const [
       PayoffData(90, -12.04),
       PayoffData(100, -12.04),
       PayoffData(110, -2.04),
@@ -54,7 +54,7 @@ void main() {
 
     var result = riskRewardService.calculatePayoff(option, underlyingPrices);
 
-    var expected = [
+    var expected = const [
       PayoffData(90, 10.05),
       PayoffData(100, 10.05),
       PayoffData(110, 0.05),
@@ -76,7 +76,7 @@ void main() {
 
     var result = riskRewardService.calculatePayoff(option, underlyingPrices);
 
-    var expected = [
+    var expected = const [
       PayoffData(90, -5.50),
       PayoffData(100, -15.50),
       PayoffData(110, -15.50),
@@ -98,7 +98,7 @@ void main() {
 
     var result = riskRewardService.calculatePayoff(option, underlyingPrices);
 
-    var expected = [
+    var expected = const [
       PayoffData(90, 4.0),
       PayoffData(100, 14.0),
       PayoffData(110, 14.0),
@@ -126,8 +126,8 @@ void main() {
           expirationDate: DateTime.parse('2025-12-17'),
         ),
       ];
-      final minUnderlyingPrice = 80.0; // Extended range
-      final maxUnderlyingPrice = 120.0; // Extended range
+      const minUnderlyingPrice = 80.0; // Extended range
+      const maxUnderlyingPrice = 120.0; // Extended range
 
       final result = riskRewardService.calculateCombinedPayoffs(
           options, minUnderlyingPrice, maxUnderlyingPrice);
@@ -144,8 +144,8 @@ void main() {
 
     test('returns correct combined payoffs for an empty list of options', () {
       List<OptionData> options = <OptionData>[];
-      final minUnderlyingPrice = 95.0;
-      final maxUnderlyingPrice = 110.0;
+      const minUnderlyingPrice = 95.0;
+      const maxUnderlyingPrice = 110.0;
 
       final result = riskRewardService.calculateCombinedPayoffs(
           options, minUnderlyingPrice, maxUnderlyingPrice);

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
 import 'package:community_charts_flutter/community_charts_flutter.dart'
     as charts;
-import 'package:flutter_risk_reward_chart/flutter_risk_reward_chart.dart';
-import 'package:flutter_risk_reward_chart/src/application/risk_reward_service.dart';
+
+import '../../flutter_risk_reward_chart.dart';
+import '../application/risk_reward_service.dart';
 
 class RiskRewardChart extends StatelessWidget {
   final List<OptionData> optionsData;
@@ -28,10 +28,6 @@ class RiskRewardChart extends StatelessWidget {
     final maxUnderlyingPrice =
         riskRewardService.maxUnderlyingPrice(optionsData);
 
-    print('Options data: $optionsData');
-    print('Min underlying price: $minUnderlyingPrice');
-    print('Max underlying price: $maxUnderlyingPrice');
-
     final payoffs = riskRewardService.calculateCombinedPayoffs(
       optionsData,
       minUnderlyingPrice,
@@ -39,7 +35,6 @@ class RiskRewardChart extends StatelessWidget {
     );
 
     final breakEvenPoints = riskRewardService.calculateBreakEvenPoints(payoffs);
-    print('Break-even points: $breakEvenPoints');
 
     final maxProfit = riskRewardService.maxProfit(payoffs);
     final maxLoss = riskRewardService.maxLoss(payoffs);
